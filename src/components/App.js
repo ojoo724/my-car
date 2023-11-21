@@ -1,68 +1,69 @@
 import { Component } from "react";
-import "./assets/css/App.css";
+import "../assets/css/App.css";
 import Fuel from "./Fuel";
+import Result from "./Result";
 
 const fuels = [
   {
     id: 1,
-    kname: "가솔린",
-    type: "gasoline",
+    name: "가솔린",
+    type: "G",
   },
   {
     id: 2,
-    kname: "디젤",
-    type: "diesel",
+    name: "디젤",
+    type: "D",
   },
   {
     id: 3,
-    kname: "친환경",
-    type: "eco",
+    name: "친환경",
+    type: "E",
   },
   {
     id: 4,
-    kname: "LPG",
-    type: "lpg",
+    name: "LPG",
+    type: "L",
   },
 ];
 
 const bodyTypes = [
   {
     id: 1,
-    kname: "경차",
+    name: "경차",
     type: "light",
   },
   {
     id: 2,
-    kname: "승용차",
+    name: "승용차",
     type: "sedan",
   },
   {
     id: 3,
-    kname: "SUV",
-    type: "SUV",
+    name: "SUV",
+    type: "suv",
   },
   {
     id: 4,
-    kname: "MPV",
-    type: "MPV",
+    name: "MPV",
+    type: "mpv",
   },
 ];
 
 const luggage = [
   {
     id: 1,
-    kname: "소형짐",
-    type: "small",
+    name: "소형짐",
+    type: "S",
   },
   {
     id: 2,
-    kname: "중형짐",
-    type: "medium",
+    name: "중형짐",
+    type: "M",
   },
   {
     id: 3,
-    kname: "대형짐",
-    type: "large",
+    name: "대형짐",
+    type: "L",
   },
 ];
 
@@ -76,10 +77,20 @@ class App extends Component {
           <div>
             {fuels.map((f, idx) => {
               return (
-                <Fuel idx={idx + 1} key={f.id} kname={f.kname} type={f.type} />
+                <Fuel idx={idx + 1} key={f.id} name={f.name} type={f.type} />
               );
             })}
           </div>
+        </div>
+        <div>
+          <h2>Result</h2>
+          <Result
+            fuel={fuels[0]}
+            bodyType={bodyTypes[1]}
+            luggage={luggage[1]}
+            minPrice="20000000"
+            maxPrice="30000000"
+          />
         </div>
       </div>
     );
