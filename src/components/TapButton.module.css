@@ -1,0 +1,8 @@
+.tapButton {
+  width: 200px;
+  height: 50px;
+}
+
+.tapButton:hover {
+  background-color: #beddf5;
+}
