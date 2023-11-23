@@ -10,6 +10,7 @@ function Main() {
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="pickCar" element={<PickCarPage />} />
+          <Route path="pickCar" element={<PickCarPage />} />
         </Routes>
       </App>
     </BrowserRouter>

@@ -1,0 +1,23 @@
+.title {
+}
+
+.img__div {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.car__img {
+  height: 200px;
+  width: auto;
+  margin-left: 15px;
+  background-color: antiquewhite;
+}
+
+.car__img__01 {
+  background-image: url("../assets/image/car/car-01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
