@@ -72,8 +72,6 @@ function Tap({ type }) {
     typeList = luggage;
   }
 
-  const pickValue = (value) => {};
-
   return (
     <div>
       <h2>{type}</h2>
